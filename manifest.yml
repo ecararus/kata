@@ -1,0 +1,9 @@
+applications:
+- name: kata
+  memory: 1G
+  instances: 2
+  path: target/kata-0.0.1.jar
+  services:
+  - sku_ds
+  stack: cflinuxfs2
+  timeout: 80
