@@ -8,6 +8,7 @@ For example, item ‘A’ might cost 50 pence individually, but this week we hav
 offer: buy three ‘A’s and they’ll cost you £1.30. 
 
 In fact this week’s prices are:
+
 |Item |Unit Price |Special Price|
 | --- |:---------:|:-----------:|
 | A   |   50      | 3 for 130   |
