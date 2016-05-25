@@ -1,4 +1,4 @@
-# Checkout Kata
+# [Checkout Kata](http://kata.cfapps.io/swagger-ui.html)
 
 Implement the code for a supermarket checkout that calculates the total price of a number of items. 
 In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. 
@@ -20,6 +20,13 @@ Our checkout accepts items in any order, so that if we scan a B, an A, and anoth
 recognise the two B’s and price them at 45 (for a total price so far of 95). 
 Because the pricing changes frequently, we need to be able to pass in a set of pricing rules each time we start
 handling a checkout transaction.
+
+##Deployment 
+Pivotal cloud: 
+cf login -a https://api.run.pivotal.io
+cf push 
+cf logs kata
+check http://kata.cfapps.io/swagger-ui.html
 
 ## Convention:
  - Test names does not contains "test" prefix and should provide as message the purpose of test(will be easy to read in case it is failing).
