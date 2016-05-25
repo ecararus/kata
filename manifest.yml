@@ -1,7 +1,7 @@
 applications:
 - name: kata
   memory: 1G
-  instances: 2
+  instances: 1
   path: target/kata-0.0.1.jar
   services:
   - sku_ds
