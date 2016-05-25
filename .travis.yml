@@ -1,0 +1,15 @@
+language: java
+sudo: false
+jdk:
+  - oraclejdk8
+env:
+  - ISOLATED=true
+
+after_success:
+  - mvn clean verify jacoco:report coveralls:report
+
+addons:
+    code_climate:
+        repo_token: $CODE_CLIMATE
+Status API Training Shop Blog About
+
