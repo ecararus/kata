@@ -8,8 +8,3 @@ env:
 after_success:
   - mvn clean verify jacoco:report coveralls:report
 
-addons:
-    code_climate:
-        repo_token: $CODE_CLIMATE
-Status API Training Shop Blog About
-
