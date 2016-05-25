@@ -23,11 +23,11 @@ handling a checkout transaction.
 
 ##Deployment 
 Pivotal cloud: 
-'''
+```
 cf login -a https://api.run.pivotal.io
 cf push 
 cf logs kata
-'''
+```
 check http://kata.cfapps.io/swagger-ui.html
 
 ## Convention:
