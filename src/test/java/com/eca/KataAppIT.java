@@ -1,48 +1,56 @@
-package com.eca.kata.facade;
+package com.eca;
 
-import com.eca.ContextSetup;
+import com.eca.kata.facade.ComputationService;
+import com.eca.kata.item.ItemService;
 import com.eca.kata.item.domain.Item;
 import com.eca.kata.item.repository.ItemRepository;
 import com.eca.kata.transformer.ItemTransformer;
 import com.eca.kata.vo.Basket;
 import com.google.common.collect.ImmutableList;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import static com.eca.KataAppConfiguration.DEFAULT_ITEMS;
 import static com.google.common.collect.Lists.newArrayList;
+import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.hasItem;
 import static org.junit.Assert.assertThat;
 
-public class ComputationServiceImplTest extends ContextSetup {
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(KataAppConfiguration.class)
+@WebAppConfiguration()
+@DirtiesContext
+public class KataAppIT {
 
     public static final Item ITEM_1 = Item.builder().name("Item1").price(10.0D).offerPrice(13D).offerQty(3).build();
     public static final Item ITEM_2 = Item.builder().name("Item2").price(1.5D).offerPrice(2.2D).offerQty(2).build();
     public static final Item ITEM_3 = Item.builder().name("Item3").price(0.20D).build();
     public static final Item ITEM_4 = Item.builder().name("Item4").price(15D).build();
-    public static final List TESTEE_ITEMS = ImmutableList.builder()
-            .add(ITEM_1)
-            .add(ITEM_2)
-            .add(ITEM_3)
-            .add(ITEM_4)
-            .build();
+
 
     @Autowired
-    private ComputationService sut;
+    protected ComputationService sut;
 
     @Autowired
-    private ItemRepository itemRepository;
+    protected ItemRepository itemRepository;
 
     @Before
     public void setUp() throws Exception {
         itemRepository.deleteAll();
-        itemRepository.save(TESTEE_ITEMS);
+        itemRepository.save(asList(ITEM_1, ITEM_2, ITEM_3, ITEM_4));
     }
 
     @Test
@@ -95,5 +103,4 @@ public class ComputationServiceImplTest extends ContextSetup {
                 ItemTransformer.toVO(ITEM_3, itemsName),
                 ItemTransformer.toVO(ITEM_4, itemsName)));
     }
-
 }
