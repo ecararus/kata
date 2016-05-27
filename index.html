@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Kata by ecararus</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Kata</h1>
+        <p>POS calculator microservice</p>
+
+        <p class="view"><a href="https://github.com/ecararus/kata">View the Project on GitHub <small>ecararus/kata</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/ecararus/kata/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/ecararus/kata/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/ecararus/kata">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="checkout-kata--" class="anchor" href="#checkout-kata--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://kata.cfapps.io/swagger-ui.html">Checkout Kata</a> <a href="https://travis-ci.org/ecararus/kata"><img src="https://travis-ci.org/ecararus/kata.svg?branch=master" alt="Build Status"></a> <a href="https://coveralls.io/github/ecararus/kata?branch=master"><img src="https://coveralls.io/repos/github/ecararus/kata/badge.svg?branch=master" alt="Coverage Status"></a>
+</h1>
+
+<p>Implement the code for a supermarket checkout that calculates the total price of a number of items. 
+In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. 
+In our store, we’ll use individual letters of the alphabet (A, B, C, and so on as the SKUs). 
+Our goods are priced individually. In addition, some items are multi-priced: buy n of them, and they’ll cost you y. 
+For example, item ‘A’ might cost 50 pence individually, but this week we have a special
+offer: buy three ‘A’s and they’ll cost you £1.30. </p>
+
+<p>In fact this week’s prices are:</p>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th align="center">Unit Price</th>
+<th align="center">Special Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td align="center">50</td>
+<td align="center">3 for 130</td>
+</tr>
+<tr>
+<td>B</td>
+<td align="center">30</td>
+<td align="center">2 for 45</td>
+</tr>
+<tr>
+<td>C</td>
+<td align="center">20</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td>D</td>
+<td align="center">15</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p>Our checkout accepts items in any order, so that if we scan a B, an A, and another B, we’ll
+recognise the two B’s and price them at 45 (for a total price so far of 95). 
+Because the pricing changes frequently, we need to be able to pass in a set of pricing rules each time we start
+handling a checkout transaction.</p>
+
+<h2>
+<a id="deployment" class="anchor" href="#deployment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deployment</h2>
+
+<p>Pivotal cloud: </p>
+
+<pre><code>cf login -a https://api.run.pivotal.io
+cf push 
+cf logs kata
+</code></pre>
+
+<p>check <a href="http://kata.cfapps.io/swagger-ui.html">http://kata.cfapps.io/swagger-ui.html</a></p>
+
+<h2>
+<a id="convention" class="anchor" href="#convention" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Convention:</h2>
+
+<ul>
+<li>Test names does not contains "test" prefix and should provide as message the purpose of test(will be easy to read in case it is failing).</li>
+<li>Test should have coverage &gt; 70%.</li>
+<li>Unit test class will have "Test" postfix.</li>
+<li>Integration test class will have "IT" postfix.</li>
+</ul>
+
+<h2>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DISCLAIMER:</h2>
+
+<p>Purpose of project is only educational.
+This project should not be used for any commercial purpose.
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">http://creativecommons.org/licenses/by-nc-sa/4.0/</a>.</p>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Author:</h2>
+
+<p>Eugeniu Cararus
+<a href="mailto:cararuseugeniu@gmail.com">cararuseugeniu@gmail.com</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/ecararus">ecararus</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
