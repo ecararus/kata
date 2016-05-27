@@ -1,4 +1,4 @@
-# [Checkout Kata](http://kata.cfapps.io/swagger-ui.html) [![Build Status](https://travis-ci.org/ecararus/kata.svg?branch=master)](https://travis-ci.org/ecararus/kata) [![Build Status](https://travis-ci.org/ecararus/kata.svg?branch=master)](https://travis-ci.org/ecararus/kata)
+# [Checkout Kata](http://kata.cfapps.io/swagger-ui.html) [![Build Status](https://travis-ci.org/ecararus/kata.svg?branch=master)](https://travis-ci.org/ecararus/kata) [![Coverage Status](https://coveralls.io/repos/github/ecararus/kata/badge.svg?branch=master)](https://coveralls.io/github/ecararus/kata?branch=master)
 
 Implement the code for a supermarket checkout that calculates the total price of a number of items. 
 In a normal supermarket, things are identified using Stock Keeping Units, or SKUs. 
